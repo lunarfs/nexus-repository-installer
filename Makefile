@@ -11,7 +11,8 @@ VERSION ?= $(shell cat version-to-build.txt)
 #BUNDLE_FILE := nexus-unix-x86-64-$(VERSION).tar.gz
 BUNDLE_FILE := nexus-$(VERSION)-linux-x86_64.tar.gz
 
-FETCH_URL ?= "https://sonatype-download.global.ssl.fastly.net/repository/downloads-prod-group/3/$(BUNDLE_FILE)"
+#FETCH_URL ?= "https://sonatype-download.global.ssl.fastly.net/repository/downloads-prod-group/3/$(BUNDLE_FILE)"
+FETCH_URL ?= "https://download.sonatype.com/nexus/3/$(BUNDLE_FILE)"
 
 # skip download and use local build/$(BUNDLE_FILE)
 # save bandwidth if you have build/* artifacts present, or workaround

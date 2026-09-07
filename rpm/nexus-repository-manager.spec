@@ -4,7 +4,7 @@ Release:	%%RELEASE%%
 Summary:	Nexus Repository Manager 3
 License:	Proprietary
 Requires:       systemd
-Requires:       java-17-openjdk-headless
+Requires:       java-21-openjdk-headless
 URL:		https://www.sonatype.com
 Source0:	%%BUNDLE_FILE%%
 Source1:        %{name}-%{version}-rpm-extra.tar.gz
@@ -114,6 +114,8 @@ fi
 /opt/sonatype/sonatype-work/nexus3
 
 %changelog
+* Mon Sep 07 2026 Frank Vissing <lunarfs@hotmail.com>
+require jdk 21, mandatory since nexus 3.87.0
 * Thu May 20 2025 Frank Vissing <lunarfs@hotmail.com>
 support downloaded nexus-$(VERSION)-linux-x86_64.tar.gz rather than nexus-unix-x86-64-$(VERSION).tar.gz
 * Thu Mar 27 2025 Frank Vissing <lunarfs@hotmail.com>
